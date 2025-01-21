@@ -5,7 +5,17 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
 // Siga os comentários para implementar cada parte do desafio.
 //Teste larissa
-
+struct Cidade {
+    char nome[100];
+    int populacao;
+    float area;  // em km²
+    float pib;   // em bilhões de unidades monetárias
+    int pontosTuristicos;  // número de pontos turísticos
+};
+struct Pais {
+    char nome[100];
+    struct Cidade cidades[8];  // Cada país terá 8 cidades
+};
 int main() {
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
