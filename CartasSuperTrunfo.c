@@ -17,7 +17,7 @@ struct Cidade {
 };
 struct Pais {
     char nome[100];
-    struct Cidade cidades[8];  // Cada país terá 8 cidades
+    struct Cidade cidades[4];  // Cada país terá 4 cidades
 };
 int main() {
     
@@ -27,7 +27,7 @@ int main() {
      struct Pais paises[8];  // Vetor de 8 países
     int i, j;
 
-    // Cadastro dos 8 países e suas 8 cidades
+    // Cadastro dos 8 países e suas 4 cidades
     for (i = 0; i < 8; i++) {
         printf("Cadastro do %dº pais:\n", i + 1);
 
@@ -35,7 +35,7 @@ int main() {
         printf("Digite o nome do pais: ");
         fgets(paises[i].nome, sizeof(paises[i].nome), stdin);
 
-        // Cadastro das 8 cidades para cada país
+        // Cadastro das 4 cidades para cada país
         for (j = 0; j < 4; j++) {
             printf("  Cidade %d do pais %s: ", j + 1, paises[i].nome);
             fgets(paises[i].cidades[j].nome, sizeof(paises[i].cidades[j].nome), stdin);
